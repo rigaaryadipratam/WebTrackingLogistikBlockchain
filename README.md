@@ -37,43 +37,37 @@ Proyek ini bertujuan mengatasi permasalahan dalam sistem logistik konvensional y
 
 - ✅ Tingkat keberhasilan fungsional: **100%**
 - ⚡ Rata-rata waktu respons: **10,40 ms**
-- 🔐 Skor keamanan (CVSS v3.1): **0.0 (None)** terhadap serangan manipulasi/penghapusan data
+- 🔐 Skor keamanan (CVSS v3.1): **0.0 (None)** terhadap skenario manipulasi/penghapusan data
 
 ---
 
 ## ▶️ Cara Menjalankan
 
-1. **Clone repository ini**
+1. **Jalankan Ganache** untuk membuat blockchain lokal.
+
+2. **Deploy smart contract** ke Ganache menggunakan Remix IDE atau Truffle.
+
+3. **Sambungkan MetaMask** ke jaringan Ganache lokal dengan mengimpor _private key_ dari salah satu akun Ganache.
+
+4. **Konfigurasi koneksi Web3.js** di file `app.js` agar sesuai dengan:
+   - `contractAddress` hasil dari proses deploy
+   - `ABI` dari smart contract yang telah dibuat
+
+5. **Aktifkan server lokal PHP**
    ```bash
-   git clone https://github.com/USERNAME/NAMA_REPOSITORY.git
-Jalankan Ganache untuk membuat blockchain lokal.
+   php -S localhost:8000
+   ```
 
-Deploy smart contract ke Ganache menggunakan Remix IDE atau Truffle.
+6. **Akses sistem melalui browser**
+   ```url
+   http://localhost:8000
+   ```
 
-Sambungkan MetaMask ke jaringan Ganache lokal dengan mengimpor private key akun Ganache.
+---
 
-Konfigurasi koneksi Web3.js di file app.js agar sesuai dengan:
+## 📂 Struktur Folder
 
-contractAddress hasil deploy
-
-ABI dari smart contract kamu
-
-Aktifkan server lokal PHP
-
-bash
-Copy
-Edit
-php -S localhost:8000
-Akses sistem melalui browser:
-
-arduino
-Copy
-Edit
-http://localhost:8000
-📂 Struktur Folder
-bash
-Copy
-Edit
+```bash
 ├── contracts/           # Berisi file smart contract Solidity
 ├── web/                 # Folder utama sistem web (PHP, JS, CSS)
 │   ├── index.php
@@ -83,14 +77,19 @@ Edit
 ├── app.js               # Koneksi blockchain via Web3.js
 ├── database.sql         # Struktur database MySQL
 └── README.md            # Dokumentasi proyek
-👨‍💻 Developer
-Nama: Riga Aryadi Pratama
+```
 
-NRP: 5002211172
+---
 
-Program Studi: Matematika, ITS
+## 👨‍💻 Developer
 
-Dosen Pembimbing: Dr. Budi Setiyono, S.Si., M.T.
+- **Nama:** Riga Aryadi Pratama  
+- **NRP:** 5002211172  
+- **Program Studi:** Matematika, ITS  
+- **Dosen Pembimbing:** Dr. Budi Setiyono, S.Si., M.T.
 
-📄 Lisensi
+---
+
+## 📄 Lisensi
+
 Proyek ini disediakan untuk keperluan akademik dan riset. Bebas digunakan dan dimodifikasi dengan tetap mencantumkan atribusi kepada penulis.
